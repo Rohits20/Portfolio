@@ -3,7 +3,11 @@ import "./App.css";
 import SplashScreen from "./Components/SplashScreen";
 import bgImage from "./Assets/gradient.svg";
 import anime from "animejs/lib/anime.es.js";
-import Card from "./Components/Card"
+import Card from "./Components/Card";
+import Typewriter from "typewriter-effect";
+import useTypewriter  from 'react-typewriter-hook';
+import Typed from "react-typed"
+
 function App() {
   const divRef = useRef(null);
 
@@ -101,7 +105,21 @@ function App() {
           </div>
           {selectedMenu === "Home" && (
             <div ref={divRef} className="menu-body">
-              Coming sooon
+              
+            <div>
+              </div>
+            <div style={{fontSize : "26px" , color :"pink"}} >
+                       <Typed
+      strings={[
+            "I am a passionate Software Developer",
+            "I am result driven and a great leader",
+            "I love solving complex problemd",
+          ]}
+          typeSpeed={100}
+          backSpeed={50}
+          loop
+        />
+            </div>
             </div>
           )}
           {selectedMenu === "About" && (
@@ -112,7 +130,6 @@ function App() {
           {selectedMenu === "Work" && (
             <div ref={divRef} style = {{top :"150px",position :"absolute", display :"flex" , flexDirection:"row" , flexWrap:"wrap" ,justifyContent:"space-between"}} >
             <Card techStack = {techStack1} desc= {"rhfrh fur hfuhrufhuerhfureu rurghuhrugutrh gutrh guh tughuthgutrhguh uheuh uerug rheug hureh gurhe ughrugheru rgr hfurhurhr hhreughuerhguugtugu t t gtugh utgut thu ghut uthguthugtu"}/>
-            <Card techStack = {techStack2} desc= {"rhfrh fur hfuhrufhuerhfureu rurghuhrugutrh gutrh guh tughuthgutrhguh uheuh uerug rheug hureh gurhe ughrugheru rgr hfurhurhr hhreughuerhguugtugu t t gtugh utgut thu ghut uthguthugtu"}/>
             <Card techStack = {techStack2} desc= {"rhfrh fur hfuhrufhuerhfureu rurghuhrugutrh gutrh guh tughuthgutrhguh uheuh uerug rheug hureh gurhe ughrugheru rgr hfurhurhr hhreughuerhguugtugu t t gtugh utgut thu ghut uthguthugtu"}/>
             <Card techStack = {techStack2} desc= {"rhfrh fur hfuhrufhuerhfureu rurghuhrugutrh gutrh guh tughuthgutrhguh uheuh uerug rheug hureh gurhe ughrugheru rgr hfurhurhr hhreughuerhguugtugu t t gtugh utgut thu ghut uthguthugtu"}/>
             <Card techStack = {techStack2} desc= {"rhfrh fur hfuhrufhuerhfureu rurghuhrugutrh gutrh guh tughuthgutrhguh uheuh uerug rheug hureh gurhe ughrugheru rgr hfurhurhr hhreughuerhguugtugu t t gtugh utgut thu ghut uthguthugtu"}/>
