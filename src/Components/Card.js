@@ -3,26 +3,12 @@ import { useEffect, useState, useRef } from "react";
 import anime from "animejs/lib/anime.es.js";
 import project1img from "../Assets/images.jpeg";
 
-const Card = ({techStack , desc ,}) => {
+const Card = ({techStack , desc , chips}) => {
   const divRef = useRef(null);
   const openInNewTab = (url) => {
     window.open(url, '_blank', 'noreferrer');
   };
 
-  let chips = [
-    {
-      title :"Project URL",
-      link : "https://stackoverflow.com/questions/66905176/how-to-redirect-to-external-url-onclick-in-react",
-    },
-    {
-      title :"Github",
-      link : "https://stackoverflow.com/questions/66905176/how-to-redirect-to-external-url-onclick-in-react",
-    },
-    {
-      title :"Demo",
-      link : "https://stackoverflow.com/questions/66905176/how-to-redirect-to-external-url-onclick-in-react",
-    },
-  ];
   return (
     <>
             <div ref={divRef} className="body">

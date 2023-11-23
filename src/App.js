@@ -40,8 +40,52 @@ function App() {
     };
   }, [selectedMenu]);
   let navMenu = ["Home", "About", "Work", "Resume", "Contact", "Blog"];
-  let techStack1 = ["wehfu", "efhewfuehfuew", "efgyew"];
-  let techStack2 = ["cuhw", "igygyugyu", "uihhuihui"];
+  let techStack1 = ["Nodejs", "Express", "Reactjs", "Mongodb"];
+  let techStack2 = ["Python", "Binary classification", "Image processing"];
+  let techStack3 = ["Nodejs", "Express", "Reactjs", "Mongodb"];
+
+  let chips1 = [
+    {
+      title :"Project URL",
+      link : "https://ephemeral-belekoy-7ae21a.netlify.app/",
+    },
+    {
+      title :"Github",
+      link : "https://github.com/Rohits20/Multi-user-code-editor",
+    },
+    {
+      title :"Demo",
+      link : "https://stackoverflow.com/questions/66905176/how-to-redirect-to-external-url-onclick-in-react",
+    },
+  ];
+  let chips2 = [
+    {
+      title :"Project URL",
+      link : "https://graceful-biscochitos-d9d3ec.netlify.app/",
+    },
+    {
+      title :"Github",
+      link : "https://github.com/Rohits20/Insti-marketplace",
+    },
+    {
+      title :"Demo",
+      link : "https://stackoverflow.com/questions/66905176/how-to-redirect-to-external-url-onclick-in-react",
+    },
+  ];
+  let chips3 = [
+    {
+      title :"Project URL",
+      link : "https://graceful-biscochitos-d9d3ec.netlify.app/",
+    },
+    {
+      title :"Github",
+      link : "https://github.com/Rohits20/Insti-marketplace",
+    },
+    {
+      title :"Demo",
+      link : "https://stackoverflow.com/questions/66905176/how-to-redirect-to-external-url-onclick-in-react",
+    },
+  ];
 
   return (
     <>
@@ -112,8 +156,8 @@ function App() {
                        <Typed
       strings={[
             "I am a passionate Software Developer",
-            "I am result driven and a great leader",
-            "I love solving complex problemd",
+            "I am result driven and a great team leader",
+            "I love solving complex problems",
           ]}
           typeSpeed={100}
           backSpeed={50}
@@ -128,12 +172,18 @@ function App() {
             </div>
           )}
           {selectedMenu === "Work" && (
-            <div ref={divRef} style = {{top :"150px",position :"absolute", display :"flex" , flexDirection:"row" , flexWrap:"wrap" ,justifyContent:"space-between"}} >
-            <Card techStack = {techStack1} desc= {"rhfrh fur hfuhrufhuerhfureu rurghuhrugutrh gutrh guh tughuthgutrhguh uheuh uerug rheug hureh gurhe ughrugheru rgr hfurhurhr hhreughuerhguugtugu t t gtugh utgut thu ghut uthguthugtu"}/>
-            <Card techStack = {techStack2} desc= {"rhfrh fur hfuhrufhuerhfureu rurghuhrugutrh gutrh guh tughuthgutrhguh uheuh uerug rheug hureh gurhe ughrugheru rgr hfurhurhr hhreughuerhguugtugu t t gtugh utgut thu ghut uthguthugtu"}/>
-            <Card techStack = {techStack2} desc= {"rhfrh fur hfuhrufhuerhfureu rurghuhrugutrh gutrh guh tughuthgutrhguh uheuh uerug rheug hureh gurhe ughrugheru rgr hfurhurhr hhreughuerhguugtugu t t gtugh utgut thu ghut uthguthugtu"}/>
-            <Card techStack = {techStack2} desc= {"rhfrh fur hfuhrufhuerhfureu rurghuhrugutrh gutrh guh tughuthgutrhguh uheuh uerug rheug hureh gurhe ughrugheru rgr hfurhurhr hhreughuerhguugtugu t t gtugh utgut thu ghut uthguthugtu"}/>
-            <Card techStack = {techStack2} desc= {"rhfrh fur hfuhrufhuerhfureu rurghuhrugutrh gutrh guh tughuthgutrhguh uheuh uerug rheug hureh gurhe ughrugheru rgr hfurhurhr hhreughuerhguugtugu t t gtugh utgut thu ghut uthguthugtu"}/>
+            <div  ref={divRef} style = {{top :"150px",position :"absolute", display :"flex" , flexDirection:"row" , flexWrap:"wrap" ,justifyContent:"space-between"}} >
+            <Card chips = {chips1} techStack = {techStack1} desc= {`●Built real-time online code editor where multiple users can share and run their code through room id.
+                                                  ● Tech stacks used in this project are ReactJs, Node, Express, sockets.io, and Firebase.
+                                                  ● Followed MVC architectural pattern for project implementation and has served 50+ users till now.
+                                                  ● Currently users have options to switch between 5 different languages to compile the code online.
+                                                  ● Used Firebase for Gmail authentication and database for storing the code corresponding to a room id.`}/>
+            <Card chips ={chips2} techStack = {techStack2} desc= {`● Developed a machine learning model to identify recyclable objects within construction debris.
+                                                                   ● Implemented a convolutional neural network through TensorFlow on Google collaboratory.
+                                                                   ● Achieved an accuracy of 92% through architecture optimization and hyperparameter tuning.`}/>
+            <Card chips ={chips3} techStack = {techStack3} desc= {`● .
+                                                                   ● Implemented a convolutional neural network through TensorFlow on Google collaboratory.
+                                                                   ●`}/>
               </div>
           )}
           {selectedMenu === "Resume" && (
