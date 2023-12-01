@@ -3,7 +3,7 @@ import { useEffect, useState, useRef } from "react";
 import anime from "animejs/lib/anime.es.js";
 import project1img from "../Assets/images.jpeg";
 
-const Card = ({techStack , desc , chips}) => {
+const Card = ({techStack , desc , chips , image}) => {
   const divRef = useRef(null);
   const openInNewTab = (url) => {
     window.open(url, '_blank', 'noreferrer');
@@ -14,7 +14,7 @@ const Card = ({techStack , desc , chips}) => {
             <div ref={divRef} className="body">
               <div
                 style={{
-                  height: "350px",
+                  height: "650px",
                   width: "470px",
                   borderRadius: "20px",
                   border: "1px grey",
@@ -23,9 +23,9 @@ const Card = ({techStack , desc , chips}) => {
               >
                 <div>
                   <img
-                    src={project1img}
+                    src={image}
                     style={{
-                      height: "100px",
+                      height: "300px",
                       width: "450px",
                       marginTop: "10px",
                       marginLeft: "10px",
@@ -68,7 +68,7 @@ const Card = ({techStack , desc , chips}) => {
                 <div
                   style={{
                     width: "430px",
-                    height: "66px",
+                    height: "150px",
                     fontSize: "14px",
                     marginTop: "10px",
                     flexWrap: "wrap",
@@ -90,7 +90,7 @@ const Card = ({techStack , desc , chips}) => {
                     flexDirection: "row",
                     justifyContent: "space-between",
                     marginLeft: "10px",
-                    marginTop: "13px",
+                    marginTop: "40px",
                   }}
                 >
               { chips.map((item , index) => {
@@ -99,14 +99,16 @@ const Card = ({techStack , desc , chips}) => {
                 key = {index}
                 onClick={()=> {openInNewTab(item?.link); console.log("jrer", index);}}
                     style={{
-                      height: "fit-content",
-                      width: "fit-content",
-                      padding: "10px",
+                      // height: "fit-content",
+                      // width: "fit-content",
+                      padding: "6px",
+                      // marginTop:"10px",
+                      // paddingLeft:"5px",
                       borderRadius: "30px",
                       cursor: "pointer",
-                      backgroundColor: "gray",
+                      backgroundColor: "rgba(128, 128, 128, 0.15)",
                       fontSize: "20px",
-                      border: "2px black",
+                      border: "7px green",
                     }}
                   >
                     {item?.title}
